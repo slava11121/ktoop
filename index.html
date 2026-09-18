@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автопарк</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Автопарк</h1>
+
+    <section>
+        <h2>Добавить транспорт</h2>
+
+        <select id="type">
+            <option value="car">Автомобиль</option>
+            <option value="electric">Электромобиль</option>
+            <option value="truck">Грузовик</option>
+            <option value="motorcycle">Мотоцикл</option>
+        </select>
+
+        <input id="brand" placeholder="Марка">
+        <input id="model" placeholder="Модель">
+        <input id="year" type="number" placeholder="Год">
+
+        <div id="extraField">
+            <label id="extraLabel">Количество мест</label>
+            <input id="extra" type="number" value="5">
+        </div>
+
+        <div id="sidecarField" hidden>
+            <label>
+                <input id="sidecar" type="checkbox">
+                Есть коляска
+            </label>
+        </div>
+
+        <button id="addButton">Добавить</button>
+
+        <p id="error"></p>
+    </section>
+
+    <section>
+        <h2>Гараж</h2>
+
+        <button id="startAllButton">
+            Запустить весь парк
+        </button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Тип</th>
+                    <th>Марка</th>
+                    <th>Модель</th>
+                    <th>Год</th>
+                    <th>Состояние</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+
+            <tbody id="vehicleTable"></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Журнал</h2>
+        <div id="log">Система запущена.</div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
